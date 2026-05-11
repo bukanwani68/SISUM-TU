@@ -64,7 +64,15 @@ $tampil_arsip = $koneksi->query($query_arsip);
         <main class="flex-1">
             <header class="bg-white shadow-sm p-4 flex justify-between items-center border-b border-emerald-100">
                 <h2 class="text-xl font-bold text-emerald-800 italic">Pusat Arsip Digital</h2>
-                <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-sm">Admin</div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-right mr-2">
+                        <p class="text-xs text-gray-400 leading-none">Role:</p>
+                        <p class="text-sm font-bold text-emerald-700"><?php echo $_SESSION['role']; ?></p>
+                    </div>
+                    <div class="w-9 h-9 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                        <?php echo substr($_SESSION['nama_lengkap'], 0, 1); ?>
+                    </div>
+                </div>
             </header>
 
             <div class="p-6">

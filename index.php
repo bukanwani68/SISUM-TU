@@ -119,9 +119,11 @@ $total_arsip = $total_masuk + $total_keluar;
                 <div class="bg-white rounded-2xl shadow-sm p-8">
                     <div class="flex justify-between items-center mb-6">
                         <h3 class="font-bold text-emerald-900 text-lg">Aktivitas Surat Terbaru</h3>
+                        <?php if ($_SESSION['role'] == 'pimpinan') : ?>
                         <a href="pilih-tipe-surat.php" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition flex items-center shadow-md">
                             <i class="fas fa-plus mr-2 text-xs"></i> Surat Baru
                         </a>
+                        <?php endif; ?>
                     </div>
 
                     <div class="overflow-x-auto">
